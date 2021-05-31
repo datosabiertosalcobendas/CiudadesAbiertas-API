@@ -114,7 +114,7 @@ public class LocalComercial implements java.io.Serializable, IGeoModelXY, RDFMod
 	
 	@ApiModelProperty(value = "Tipo de actividad económica que se realiza en un local comercia. Ejemplo: 90")
 	@CsvBindByPosition(position=6)
-	@CsvBindByName(column="tipoActividadEconomica")
+	@CsvBindByName(column="codigoCNAE")
 	@Rdf(contexto = Context.ESCOM, propiedad = "tipoActividadEconomica")
 	@RdfExternalURI(inicioURI="http://vocab.linkeddata.es/datosabiertos/kos/comercio/cnae/Cod4/", finURI="codigoCNAE", urifyLevel=0)
 	private String codigoCNAE;
