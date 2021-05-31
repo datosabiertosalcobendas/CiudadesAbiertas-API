@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+	
+	<changeSet author="Localidata" id="table-comercios-alco-change1">
+		
+		<addColumn tableName="local_comercial" >
+				<column name="cod_cnae" type="varchar(10)"/>  
+				<column name="id_ayuntamiento" type="varchar(50)"/>  
+				<column name="id_comunidad" type="varchar(50)"/>  
+				<column name="id_estado" type="varchar(50)"/>  
+				<column name="nombre_titular" type="varchar(200)"/>  
+		</addColumn>  
+		<rollback>
+		<dropColumn tableName="local_comercial">
+			<column  name="cod_cnae"/>
+			<column  name="id_ayuntamiento"/>  
+			<column  name="id_comunidad"/>  
+			<column  name="id_estado"/>  
+			<column  name="nombre_titular"/>  
+		</dropColumn>  
+		</rollback>
+	</changeSet>
+	
+
+
+	
+  	 <changeSet id="LOCAL-ALCO-tag-2.01" author="Localidata">
+    	<tagDatabase tag="2.01" />
+  	</changeSet>  
+	
+ 
+</databaseChangeLog>

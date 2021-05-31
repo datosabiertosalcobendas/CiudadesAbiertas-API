@@ -66,8 +66,17 @@ public class LocalComercialUtilTest
 			"    \"description\" : \"Descripcion OGAME : Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book\",\r\n" + 
 			"    \"xETRS89\" : 441201.61000,\r\n" + 
 			"    \"yETRS89\" : 4479589.52999,\r\n" + 
-			"    \"portalId\" : \"PORTAL00008\"\r\n" +
+			"    \"portalId\" : \"PORTAL00008\",\r\n" +
+			
+			"    \"codigoCNAE\" : \"8787\",\r\n" +
+			"    \"idAyuntamiento\" : \"282828\",\r\n" +
+			"    \"idComunidad\" : \"1231231\",\r\n" +
+			"    \"idEstatal\" : \"12313\",\r\n" +
+			"    \"nombreTitular\" : \"Manuel Gómez Hierro\"\r\n" +
 			"  }";
+	
+	
+
 
 	@Test
 	public void constructorCopia() throws JsonParseException, JsonMappingException, IOException, IllegalArgumentException, IllegalAccessException

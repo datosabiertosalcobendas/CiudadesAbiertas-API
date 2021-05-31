@@ -446,6 +446,14 @@ public class LocalComercialTest {
     	
     	Field[] declaredFields = (LocalComercial.class).getDeclaredFields();
     	
+    	
+    	String [][] exceptionFields = {
+				{"codigoCNAE"},
+				{"tipoActividadEconomica"}};
+	
+ 
+    	
+    	
     	boolean checkFields=true;
     	
     	for (Field f:declaredFields)
@@ -453,7 +461,7 @@ public class LocalComercialTest {
     		Rdf annotation=f.getAnnotation(Rdf.class);
     		if (annotation!=null)
     		{        		        		
-    			if (!Util.validatorFieldRDF(f.getName(), annotation.propiedad()))
+    			if (!Util.validatorFieldRDF(f.getName(), annotation.propiedad(),exceptionFields))
     			{
     				log.info(f.getName()+" vs. "+annotation.propiedad() );
     				checkFields=false;

@@ -112,133 +112,141 @@ public class LocalComercial implements java.io.Serializable, IGeoModelXY, RDFMod
 	@RdfExternalURI(inicioURI="http://vocab.linkeddata.es/datosabiertos/kos/comercio/cnae/Division/", finURI="tipoActividadEconomica", urifyLevel=0)
 	private String tipoActividadEconomica;
 	
-	@ApiModelProperty(value = "El nombre comercial es todo aquel signo que puede ser representado gráficamente y, que identifica a una empresa en el tráfico mercantil distinguiéndola de las demás empresas que van a desarrollar actividades idénticas o similares. Ejemplo: Nombre Comercial OGAME")
+	@ApiModelProperty(value = "Tipo de actividad económica que se realiza en un local comercia. Ejemplo: 90")
 	@CsvBindByPosition(position=6)
+	@CsvBindByName(column="tipoActividadEconomica")
+	@Rdf(contexto = Context.ESCOM, propiedad = "tipoActividadEconomica")
+	@RdfExternalURI(inicioURI="http://vocab.linkeddata.es/datosabiertos/kos/comercio/cnae/Cod4/", finURI="codigoCNAE", urifyLevel=0)
+	private String codigoCNAE;
+	
+	
+	@ApiModelProperty(value = "El nombre comercial es todo aquel signo que puede ser representado gráficamente y, que identifica a una empresa en el tráfico mercantil distinguiéndola de las demás empresas que van a desarrollar actividades idénticas o similares. Ejemplo: Nombre Comercial OGAME")
+	@CsvBindByPosition(position=7)
 	@CsvBindByName(column="nombreComercial")
 	@Rdf(contexto = Context.ESCOM, propiedad = "nombreComercial")
 	private String nombreComercial;
 	
 	@ApiModelProperty(value = "Signo o denominación que sirve para dar a conocer al público un establecimiento comercial y para distinguirlo de otros destinados a actividades idénticas o similares. Ejemplo: Rotulo OGAME")
-	@CsvBindByPosition(position=7)
+	@CsvBindByPosition(position=8)
 	@CsvBindByName(column="rotulo")
 	@Rdf(contexto = Context.ESCOM, propiedad = "rotulo")
 	private String rotulo;
 	
 	@ApiModelProperty(value = "Capacidad del local, expresada como el número de personas que caben en él. Ejemplo: 3")
-	@CsvBindByPosition(position=8)
+	@CsvBindByPosition(position=9)
 	@CsvBindByName(column="aforo")
 	@Rdf(contexto = Context.ESCOM, propiedad = "aforo", typeURI=Context.XSD_URI+"int")
 	private Integer aforo;
 	
 	@ApiModelProperty(value = "Tipos de situación en los que se puede encontrar un local comercial. Ejemplo: activo")
-	@CsvBindByPosition(position=9)
+	@CsvBindByPosition(position=10)
 	@CsvBindByName(column="tipoSituacion")
 	@Rdf(contexto = Context.ESCOM, propiedad = "tipoSituacion")
 	@RdfExternalURI(inicioURI="http://vocab.linkeddata.es/datosabiertos/kos/comercio/tipo-situacion/", finURI="tipoSituacion", urifyLevel=1)
 	private String tipoSituacion;
 
 	@ApiModelProperty(value = "Un local comercial puede tener los siguientes tipos de acceso: puerta de calle, interior, o piso. Ejemplo: puerta de calle")
-	@CsvBindByPosition(position=10)
+	@CsvBindByPosition(position=11)
 	@CsvBindByName(column="tipoAcceso")
 	@Rdf(contexto = Context.ESCOM, propiedad = "tipoAcceso")
 	@RdfExternalURI(inicioURI="http://vocab.linkeddata.es/datosabiertos/kos/comercio/tipo-acceso/", finURI="tipoAcceso", urifyLevel=1)
 	private String tipoAcceso;
 
 	@ApiModelProperty(value = "La referencia catastral es el identificador oficial y obligatorio de los bienes inmuebles. Ejemplo: 9872023 VH5797S 0001 WX")
-	@CsvBindByPosition(position=11)
+	@CsvBindByPosition(position=12)
 	@CsvBindByName(column="referenciaCatastral")
 	@Rdf(contexto = Context.ESCOM, propiedad = "referenciaCatastral")
 	private String referenciaCatastral;
 	
 	@ApiModelProperty(value = "El local comercial puede tener una o varias licencias de funcionamiento a lo largo de su historia. Ejemplo: 270002391-106-2003-01539")
-	@CsvBindByPosition(position=12)
+	@CsvBindByPosition(position=13)
 	@CsvBindByName(column="tieneLicenciaApertura")
 	@Rdf(contexto = Context.ESCOM, propiedad = "tieneLicenciaApertura")
 	@RdfExternalURI(inicioURI= "/local-comercial/licencia-actividad/", finURI="tieneLicenciaApertura")	
 	private String tieneLicenciaApertura;
 	
 	@ApiModelProperty(value = "Un local comercial puede tener una terraza asociada. Ejemplo: 4932")
-	@CsvBindByPosition(position=13)
+	@CsvBindByPosition(position=14)
 	@CsvBindByName(column="tieneTerraza")
 	@Rdf(contexto = Context.ESCOM, propiedad = "tieneTerraza")
 	@RdfExternalURI(inicioURI= "/local-comercial/terraza/", finURI="tieneTerraza")
 	private String tieneTerraza;
 	
 	@ApiModelProperty(value = "Cualquier entidad (por ejemplo, un local comercial) puede pertenecer a una agrupación comercial. Ejemplo: 99000221")
-	@CsvBindByPosition(position=14)
+	@CsvBindByPosition(position=15)
 	@CsvBindByName(column="agrupacionComercial")
 	@Rdf(contexto = Context.ESCOM, propiedad = "agrupacionComercial")
 	@RdfExternalURI(inicioURI= "/local-comercial/agrupacion-comercial/", finURI="agrupacionComercial")
 	private String agrupacionComercial;
 	
 	@ApiModelProperty(value = "Calle del local comercial. Ejemplo: Calle Bravo Murillo Num 360")
-	@CsvBindByPosition(position=15)
+	@CsvBindByPosition(position=16)
 	@CsvBindByName(column="streetAddress", format=Constants.STRING_FORMAT)
 	@Rdf(contexto = Context.SCHEMA, propiedad = "streetAddress")
 	@RdfBlankNode(tipo=Context.SCHEMA_URI+"PostalAddress", propiedad=Context.SCHEMA_URI+"address", nodoId="address")
 	private String streetAddress;
 	
 	@ApiModelProperty(value = "Código postal del local comercial. Ejemplo: 28039")
-	@CsvBindByPosition(position=16)
+	@CsvBindByPosition(position=17)
 	@CsvBindByName(column="postalCode", format=Constants.STRING_FORMAT)
 	@Rdf(contexto = Context.SCHEMA, propiedad = "postalCode")	
 	@RdfBlankNode(tipo=Context.SCHEMA_URI+"PostalAddress", propiedad=Context.SCHEMA_URI+"address", nodoId="address")	
 	private String postalCode;
 	
 	@ApiModelProperty(value = "Identificador de la calle del local comercial. Ejemplo: PORTAL000098")
-	@CsvBindByPosition(position=17)
+	@CsvBindByPosition(position=18)
 	@CsvBindByName(column="portalId", format=Constants.STRING_FORMAT)
 	@Rdf(contexto = Context.ESCJR, propiedad = "portal")
 	@RdfExternalURI(inicioURI="/callejero/portal/",finURI="portalId", urifyLevel = 1)
 	private String portalId;
 	
 	@ApiModelProperty(value = "Coordenada X del local comercial. Ejemplo: 441201.60999147")
-	@CsvBindByPosition(position=18)
+	@CsvBindByPosition(position=19)
 	@CsvBindByName(column="xETRS89")	
 	@Rdf(contexto = Context.GEOCORE, propiedad = "xETRS89", typeURI=Context.XSD_URI+"double")
 	private BigDecimal x;
 	
 	@ApiModelProperty(value = "Coordenada Y del local comercial. Ejemplo: 4479589.52997752")
-	@CsvBindByPosition(position=19)
+	@CsvBindByPosition(position=20)
 	@CsvBindByName(column="yETRS89")
 	@Rdf(contexto = Context.GEOCORE, propiedad = "yETRS89", typeURI=Context.XSD_URI+"double")
 	private BigDecimal y;
 	
 	@Transient
 	@ApiModelProperty(hidden = true)
-	@CsvBindByPosition(position=20)
+	@CsvBindByPosition(position=21)
 	@CsvBindByName(column="latitud")
 	@Rdf(contexto = Context.GEO, propiedad = "lat", typeURI=Context.XSD_URI+"double")	
 	private BigDecimal latitud;
 	
 	@Transient
 	@ApiModelProperty(hidden = true)
-	@CsvBindByPosition(position=21)
+	@CsvBindByPosition(position=22)
 	@CsvBindByName(column="longitud")
 	@Rdf(contexto = Context.GEO, propiedad = "long", typeURI=Context.XSD_URI+"double")
 	private BigDecimal longitud;
 	
 	@ApiModelProperty(value = "Identificador del municipio del local comercial. Ejemplo: 28079")
-	@CsvBindByPosition(position=22)
+	@CsvBindByPosition(position=23)
 	@CsvBindByName(column="municipioId", format=Constants.STRING_FORMAT)
 	@Rdf(contexto = Context.ESADM, propiedad = "municipio")
 	@RdfExternalURI(inicioURI="/territorio/municipio/",finURI="municipioId", urifyLevel = 1)
 	private String municipioId;
 	
 	@ApiModelProperty(value = "Nombre del municipio del local comercial. Ejemplo: Madrid")
-	@CsvBindByPosition(position=23)
+	@CsvBindByPosition(position=24)
 	@CsvBindByName(column="municipioTitle", format=Constants.STRING_FORMAT)
 	private String municipioTitle;
 	
 	@ApiModelProperty(value = "Identificador del barrio del local comercial. Ejemplo: 280796062")
-	@CsvBindByPosition(position=24)
+	@CsvBindByPosition(position=25)
 	@CsvBindByName(column="barrio", format=Constants.STRING_FORMAT)
 	@Rdf(contexto = Context.ESADM, propiedad = "barrio")		
 	@RdfExternalURI(inicioURI="/territorio/barrio/",finURI="barrioId", urifyLevel = 1)		
 	private String barrioId;
 	
 	@ApiModelProperty(value = "Identificador del distrito del local comercial. Ejemplo: 28079606")
-	@CsvBindByPosition(position=25)
+	@CsvBindByPosition(position=26)
 	@CsvBindByName(column="distrito", format=Constants.STRING_FORMAT)
 	@Rdf(contexto = Context.ESADM, propiedad = "distrito")
 	@RdfExternalURI(inicioURI="/territorio/distrito/",finURI="distritoId", urifyLevel = 1)
@@ -249,8 +257,28 @@ public class LocalComercial implements java.io.Serializable, IGeoModelXY, RDFMod
 	@RdfBlankNode(tipo=Context.SCHEMA_URI+"PostalAddress", propiedad=Context.SCHEMA_URI+"address", nodoId="address")	
 	private String portalIdIsolated;
 	
+	@ApiModelProperty(value = "Identificador de licencia para el Ayuntamiento. Ejemplo: N-00166")
+	@CsvBindByPosition(position=27)	
+	@CsvBindByName(column="idAyuntamiento", format=Constants.STRING_FORMAT)
+	private String idAyuntamiento;
+	
+	@ApiModelProperty(value = "Identificador de licencia para la Comunidad. Ejemplo: 1327")
+	@CsvBindByPosition(position=28)	
+	@CsvBindByName(column="idComunidad", format=Constants.STRING_FORMAT)
+	private String idComunidad;
+	
+	@ApiModelProperty(value = "Identificador de licencia para el País. Ejemplo: 280923")
+	@CsvBindByPosition(position=29)	
+	@CsvBindByName(column="idEstatal", format=Constants.STRING_FORMAT)
+	private String idEstatal;
+	
+	@ApiModelProperty(value = "Nombre del Titular. Ejemplo: Julian Perez Tercero")
+	@CsvBindByPosition(position=30)	
+	@CsvBindByName(column="nombreTitular", format=Constants.STRING_FORMAT)
+	private String nombreTitular;
+	
 	@ApiModelProperty(value = "Descripción del local comercial. Ejemplo: Descripcion OGAME")
-	@CsvBindByPosition(position=26)	
+	@CsvBindByPosition(position=31)	
 	@CsvBindByName(column="description", format=Constants.STRING_FORMAT)
 	@Rdf(contexto = Context.SCHEMA, propiedad = "description")
 	private String description;
@@ -261,11 +289,6 @@ public class LocalComercial implements java.io.Serializable, IGeoModelXY, RDFMod
 	{
 	}
 
-	public LocalComercial(String ikey, String id)
-	{
-		this.ikey = ikey;
-		this.id = id;
-	}
 
 	public LocalComercial(LocalComercial lc)
 	{
@@ -296,6 +319,12 @@ public class LocalComercial implements java.io.Serializable, IGeoModelXY, RDFMod
 		this.x=lc.x;
 		this.y=lc.y;
 		this.portalId = lc.portalId;
+		
+		this.codigoCNAE = lc.codigoCNAE;
+		this.idAyuntamiento=lc.idAyuntamiento;
+		this.idComunidad=lc.idComunidad;
+		this.idEstatal=lc.idEstatal;
+		this.nombreTitular=lc.nombreTitular;
 	}
 	
 	
@@ -411,6 +440,26 @@ public class LocalComercial implements java.io.Serializable, IGeoModelXY, RDFMod
 		
 		if (attributesToSet.contains("portalId")) {
 			this.portalId = lc.portalId;
+		}
+		
+		if (attributesToSet.contains("codigoCNAE")) {
+			this.codigoCNAE = lc.codigoCNAE;
+		}
+		
+		if (attributesToSet.contains("idAyuntamiento")) {
+			this.idAyuntamiento=lc.idAyuntamiento;
+		}
+
+		if (attributesToSet.contains("idComunidad")) {
+			this.idComunidad=lc.idComunidad;
+		}
+	
+		if (attributesToSet.contains("idEstatal")) {
+			this.idEstatal=lc.idEstatal;
+		}
+	
+		if (attributesToSet.contains("nombreTitular")) {
+			this.nombreTitular=lc.nombreTitular;
 		}
 		
 	}
@@ -736,6 +785,52 @@ public class LocalComercial implements java.io.Serializable, IGeoModelXY, RDFMod
 
 	public void setPortalIdIsolated(String portalIdIsolated) {
 		this.portalIdIsolated = portalIdIsolated;
+	}
+	
+		
+	@Column(name = "cod_cnae")
+	public String getCodigoCNAE() {
+		return codigoCNAE;
+	}
+
+	public void setCodigoCNAE(String codigoCNAE) {
+		this.codigoCNAE = codigoCNAE;
+	}
+
+	@Column(name = "id_ayuntamiento")
+	public String getIdAyuntamiento() {
+		return idAyuntamiento;
+	}
+
+	public void setIdAyuntamiento(String idAyuntamiento) {
+		this.idAyuntamiento = idAyuntamiento;
+	}
+
+	@Column(name = "id_comunidad")
+	public String getIdComunidad() {
+		return idComunidad;
+	}
+
+	public void setIdComunidad(String idComunidad) {
+		this.idComunidad = idComunidad;
+	}
+
+	@Column(name = "id_estado")
+	public String getIdEstatal() {
+		return idEstatal;
+	}
+
+	public void setIdEstatal(String idEstatal) {
+		this.idEstatal = idEstatal;
+	}
+
+	@Column(name = "nombre_titular")
+	public String getNombreTitular() {
+		return nombreTitular;
+	}
+
+	public void setNombreTitular(String nombreTitular) {
+		this.nombreTitular = nombreTitular;
 	}
 
 	@Override

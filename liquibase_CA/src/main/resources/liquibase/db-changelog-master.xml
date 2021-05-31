@@ -221,5 +221,13 @@
   <!-- 1.99 ForeginKeys -->
   <include file="liquibase/db-changelog-script-1.99-FOREIGNKEY.xml"/>  
 	
+  <!-- 2.0 Alcobendas -->
+  <include file="liquibase/db-changelog-script-2.0.xml"/>
+	
+  <!-- 2.01 Local comercial -->
+  <include file="liquibase/db-changelog-script-2.01-LOCAL-COMERCIAL-ALCOBENDAS-table.xml"/>  
+	
+  
+   
    
 </databaseChangeLog>
