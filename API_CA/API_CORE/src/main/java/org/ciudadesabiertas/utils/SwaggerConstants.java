@@ -268,15 +268,15 @@ public class SwaggerConstants
 	public static final String PARAM_COND_ADI_BARRIO = " Ejemplo: distrito = 2800601";
 	
 	//Información Superior
-	public static final String EMAIL_CONTACTO = "contacto@ciudadesabiertas.es";
-	public static final String NOMBRE_CONTACTO = "Ciudades Abiertas";
-	public static final String WEB_CONTACTO = "https://ciudadesabiertas.es/contacto/index.html";	
-	public static final String URL_WEB = "https://ciudadesabiertas.es";
-	public static final String TITULO_API = "Ciudades Abiertas API";
-	public static final String DESCRIPTION_API = "API sobre los conjuntos de datos del proyecto Ciudades Abiertas";
+	public static final String EMAIL_CONTACTO = "serviciosinteractivos@aytoalcobendas.org";
+	public static final String NOMBRE_CONTACTO = "Ayuntamiento de Alcobendas";
+	public static final String WEB_CONTACTO = "https://datos.alcobendas.org";	
+	public static final String URL_WEB = "https://www.alcobendas.org";
+	public static final String TITULO_API = "API de Datos Abiertos";
+	public static final String DESCRIPTION_API = "API sobre conjuntos de datos del Ayuntamiento de Alcobendas";
 	public static final String VERSION_API = "1.0";
-	public static final String URL_LICENCIA = "https://joinup.ec.europa.eu/software/page/eupl";
-	public static final String TEXTO_LICENCIA = "Copyright 2019 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento de Santiago de Compostela, Ayuntamiento de Zaragoza, Entidad Pública Empresarial Red.es."; 
+	public static final String URL_LICENCIA = "http://www.opendefinition.org/licenses/odc-by";
+	public static final String TEXTO_LICENCIA = "Copyright 2021 Ayuntamiento de Alcobendas."; 
 	
 	//Subvencion agrupadas
 	public static final String AGRUPADAS_OPER_PERMITIDAS= "SUM,COUNT,AVG,MAX,MIN";

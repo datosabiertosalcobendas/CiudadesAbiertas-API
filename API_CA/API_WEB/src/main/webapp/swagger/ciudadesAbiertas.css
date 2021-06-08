@@ -194,3 +194,63 @@ td.parameters-col_description input
 	color: #0056B3;
     text-decoration: underline;
 }
+
+
+
+
+#operations-tag-DSD_-_Cubo_de_Datos {
+display:none;
+}
+#operations-tag-DSD_-_Dimensión {
+display:none;
+}
+#operations-tag-DSD_-_Medida {
+display:none;
+}
+
+#operations-tag-DSD_-_Valor_de_una_dimensión {
+display:none;
+}
+
+#operations-tag-Local_Comercial_-_Agrupación_Comercial {
+display:none;
+}
+
+#operations-tag-Local_Comercial_-_Licencia_de_Actividad {
+display:none;
+}
+
+#operations-tag-Local_Comercial_-_Terraza {
+display:none;
+}
+
+#operations-tag-Territorio_-_Autonomía {
+display:none;
+}
+
+#operations-tag-Territorio_-_Barrio {
+display:none;
+}
+
+#operations-tag-Territorio_-_Distrito {
+display:none;
+}
+
+#operations-tag-Territorio_-_Municipio {
+display:none;
+}
+
+#operations-tag-Territorio_-_País {
+display:none;
+}
+
+#operations-tag-Territorio_-_Provincia {
+display:none;
+}
+
+#operations-tag-Territorio_-_Sección_Censal {
+display:none;
+}
+
+
+
